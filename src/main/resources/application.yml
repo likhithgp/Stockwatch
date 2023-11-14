@@ -1,0 +1,53 @@
+spring:
+   application:
+     name: staockwatch
+   h2:
+     console:
+       enabled: true
+   datasource:
+     platform: h2
+     url: jdbc:h2:mem:stockmarketdetails
+     username: root
+     password: root
+     initialization-mode: always
+     initialization-order: 1
+     driverClassName: org.h2.Driver
+  
+   jpa:
+     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+     defer-datasource-initialization: true
+     hibernate:
+       ddl-auto: create
+     show-sql: true
+     
+   stockdelete:
+     message: Deleted stock detailsSucessfully with the name
+     
+server:
+  port: 8085
+  
+  
+swagger:
+  env:
+    url: http://localhost:8085
+  contract:
+    email: likhithgp2021@gmail.com
+    name: Likhith
+  info:
+    title: Stock watch API Managenemt
+    desc: Exposes an API To view stock of company and they can customize data view
+  licence:
+    name: OpenSource LICENSE
+    url: https://opensource.org/license/MIT/
+    
+logging:
+  level: 
+    root: info
+    com:
+      learn: TRACE
+  file: appLog.log
+    
+
+
+
+    

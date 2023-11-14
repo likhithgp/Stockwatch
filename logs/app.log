@@ -1,0 +1,98 @@
+13:00:47.920 [main] INFO  c.l.s.StockwatchApplicationTests - Starting StockwatchApplicationTests using Java 17.0.6 with PID 2172 (started by Likhith in C:\Users\Administrator\Desktop\stockwatch)
+13:00:47.933 [main] DEBUG c.l.s.StockwatchApplicationTests - Running with Spring Boot v3.1.5, Spring v6.0.13
+13:00:47.935 [main] INFO  c.l.s.StockwatchApplicationTests - No active profile set, falling back to 1 default profile: "default"
+13:00:49.948 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:00:50.105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+13:00:51.145 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:00:51.352 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+13:00:51.359 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+13:00:52.142 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:00:52.197 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:00:52.566 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:stockmarketdetails user=ROOT
+13:00:52.570 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:00:53.815 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:00:53.881 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:00:55.087 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:00:57.692 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:stockmarketdetails'
+13:00:58.262 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+13:00:58.528 [main] INFO  c.l.s.StockwatchApplicationTests - Started StockwatchApplicationTests in 11.003 seconds (process running for 12.593)
+13:01:00.510 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.learn.stockwatch.StockWatchIntegrationTest]: StockWatchIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:01:00.529 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.learn.stockwatch.StockwatchApplication for test class com.learn.stockwatch.StockWatchIntegrationTest
+13:01:00.572 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+13:01:00.621 [main] INFO  c.l.s.StockWatchIntegrationTest - Starting StockWatchIntegrationTest using Java 17.0.6 with PID 2172 (started by Likhith in C:\Users\Administrator\Desktop\stockwatch)
+13:01:00.621 [main] DEBUG c.l.s.StockWatchIntegrationTest - Running with Spring Boot v3.1.5, Spring v6.0.13
+13:01:00.621 [main] INFO  c.l.s.StockWatchIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+13:01:01.325 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:01:01.345 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+13:01:01.750 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+13:01:01.778 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:01:01.779 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+13:01:02.006 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:01:02.007 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1382 ms
+13:01:02.077 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+13:01:02.079 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:stockmarketdetails user=ROOT
+13:01:02.079 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+13:01:02.080 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:stockmarketdetails'
+13:01:02.257 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:01:02.270 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:01:02.346 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:01:02.354 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:01:02.470 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:01:03.654 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring TestDispatcherServlet ''
+13:01:03.654 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+13:01:03.659 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+13:01:03.668 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 14 ms
+13:01:03.799 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 50823 (http) with context path ''
+13:01:03.811 [main] INFO  c.l.s.StockWatchIntegrationTest - Started StockWatchIntegrationTest in 3.238 seconds (process running for 17.876)
+13:01:04.183 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:01:04.184 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:01:04.186 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:01:04.307 [http-nio-auto-1-exec-1] DEBUG c.l.s.c.StockWatchController - Called Post API to add Stock details for payload StockDetails(id=null, stockName=ABC INC., stockSymbol=AB, currencyType=Pound, currentPrice=400.0, highOf52weeks=301.55, lowOf52weeks=456.82)
+13:01:04.316 [http-nio-auto-1-exec-1] INFO  c.l.s.c.StockWatchController -  Post API call to add Stock details for company ABC INC.
+13:01:04.318 [http-nio-auto-1-exec-1] INFO  c.l.s.service.StockWatchServiceImpl - Started executing method to save data to DB
+13:01:04.508 [http-nio-auto-1-exec-1] INFO  c.l.s.service.StockWatchServiceImpl - End of method execution save data to DB
+13:01:04.643 [http-nio-auto-1-exec-2] INFO  c.l.s.c.StockWatchController - Called API to get stock of the company Likhith INC
+13:01:04.643 [http-nio-auto-1-exec-2] INFO  c.l.s.service.StockWatchServiceImpl - Started executing method to get stock details for company Likhith INC
+13:01:04.922 [http-nio-auto-1-exec-2] INFO  c.l.s.service.StockWatchServiceImpl - End of method execution to get stock details for company Likhith INC
+13:01:05.081 [http-nio-auto-1-exec-3] INFO  c.l.s.c.StockWatchController - API call to get all stock details
+13:01:05.082 [http-nio-auto-1-exec-3] INFO  c.l.s.service.StockWatchServiceImpl - Executing method to get stock details all company {}
+13:01:05.362 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.learn.stockwatch.StockwatchServiceTest]: StockwatchServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:01:05.366 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.learn.stockwatch.StockwatchApplication for test class com.learn.stockwatch.StockwatchServiceTest
+13:01:05.901 [main] INFO  c.l.s.service.StockWatchServiceImpl - Executing method to get stock details all company {}
+13:01:05.969 [main] INFO  c.l.s.service.StockWatchServiceImpl - Started executing method to get stock details for company London Stock Exchange
+13:01:05.977 [main] INFO  c.l.s.service.StockWatchServiceImpl - End of method execution to get stock details for company London Stock Exchange
+13:01:06.008 [main] INFO  c.l.s.service.StockWatchServiceImpl - Started executing method to save data to DB
+13:01:06.009 [main] INFO  c.l.s.service.StockWatchServiceImpl - End of method execution save data to DB
+13:01:06.086 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:01:06.093 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:01:06.098 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+13:01:06.183 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:01:06.186 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+13:01:06.189 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+13:09:12.721 [restartedMain] INFO  c.l.stockwatch.StockwatchApplication - Starting StockwatchApplication using Java 17.0.6 with PID 9852 (C:\Users\Administrator\Desktop\stockwatch\target\classes started by Likhith in C:\Users\Administrator\Desktop\stockwatch)
+13:09:12.722 [restartedMain] DEBUG c.l.stockwatch.StockwatchApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+13:09:12.723 [restartedMain] INFO  c.l.stockwatch.StockwatchApplication - No active profile set, falling back to 1 default profile: "default"
+13:09:12.775 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+13:09:12.776 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+13:09:13.677 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:09:13.727 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+13:09:14.310 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+13:09:14.319 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:09:14.319 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+13:09:14.381 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:09:14.381 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1605 ms
+13:09:14.458 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:09:14.617 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:stockmarketdetails user=ROOT
+13:09:14.619 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:09:14.628 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:stockmarketdetails'
+13:09:14.757 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:09:14.828 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+13:09:14.831 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+13:09:15.075 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:09:15.839 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:09:15.872 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:09:16.260 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:09:17.294 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+13:09:17.300 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+13:09:17.364 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+13:09:17.379 [restartedMain] INFO  c.l.stockwatch.StockwatchApplication - Started StockwatchApplication in 5.112 seconds (process running for 5.756)
