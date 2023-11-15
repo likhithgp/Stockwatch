@@ -124,4 +124,13 @@ public class StockWatchServiceImpl implements StockWatchService {
 		return StockWatchConversionUtility.stockDTOToStockEntity(details);
 	}
 
+
+	@Override
+	public Page<StockDetails> getAllStocksByFilter(int pageSize,int offset,Double min, Double max, String sortField, String sortOrder) {
+		// TODO Auto-generated method stub
+		logger.info("Executing method to get stock details to filter by current price min value {} and max value {}",min,max);
+		 PageRequest pageable = PageRequest.of(offset, pageSize, Sort.by(sortField));
+		return stockRepo.findByCurrentPriceBetween(min,max,pageable);
+	}
+
 }

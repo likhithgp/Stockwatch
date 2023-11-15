@@ -122,6 +122,29 @@ public class StockWatchController {
 				stockService.getAllStocksByPaginationAndSort(offset, pageSize, feildName), HttpStatus.OK);
 
 	}
+	
+	
+	@Operation(summary = "To get all companyName Stock details by pagination of particular size and sorted and filtered by Current price column ")
+	@ApiResponses({
+			@ApiResponse(responseCode = "200", description = "Retrived  Stock details of given page size in Sucessfully"),
+			@ApiResponse(responseCode = "404", description = "No Data found in server,Enter Valid details") })
+	@GetMapping("/stocks/filterBycurrentPrice/{min}/{max}")
+	public ResponseEntity<Page<StockDetails>> getAllstockDetailsPagenationAndSort(@PathVariable Double max,
+			@PathVariable Double min,
+			@RequestParam(defaultValue = "0") int offset,
+			@RequestParam( defaultValue = "10")int pageSize,
+			@RequestParam(defaultValue = "currentPrice") String feildName,
+			@RequestParam(defaultValue = SORTING_TYPE_DEFAULT) String sortOrder ) {
+
+		logger.info("Filter API call to get all stock for min value {} and max {} Sorted by coloumn {}", min,
+				max, feildName);
+		return new ResponseEntity<Page<StockDetails>>(
+				stockService.getAllStocksByFilter(pageSize, offset,min,max, feildName,sortOrder), HttpStatus.OK);
+
+	}
+	
+	
+	
 
 	@Operation(summary = "To add new companyName Stock details")
 	@ApiResponses({ @ApiResponse(responseCode = "201", description = "Added Stock details Sucessfully"),

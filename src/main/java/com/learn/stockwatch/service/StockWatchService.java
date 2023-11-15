@@ -87,4 +87,15 @@ public interface StockWatchService {
 	 */
 	public void deleteStockDetails(String stockName);
 
+	/**
+	 * To return data based on filter of min and max value
+	 * 
+	 * @param min
+	 * @param max
+	 * @param sortField
+	 * @param sortOrder
+	 * @return
+	 */
+	public Page<StockDetails> getAllStocksByFilter(int pageSize,int offset,Double min, Double max, String sortField, String sortOrder);
+
 }
