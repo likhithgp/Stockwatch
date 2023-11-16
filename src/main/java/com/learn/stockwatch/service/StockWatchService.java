@@ -78,7 +78,7 @@ public interface StockWatchService {
 	 * @param sortColoumName
 	 * @return
 	 */
-	public Page<StockDetails> getAllStocksByPaginationAndSort(int offset, int pageSize, String sortColoumName);
+	public Page<StockDetails> getAllStocksByPaginationAndSort(int offset, int pageSize, String sortColoumName,String sortOder);
 
 	/**
 	 * To delete stock details of the company based on stock name

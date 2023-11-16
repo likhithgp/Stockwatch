@@ -20,6 +20,13 @@ public class StockwatchCentralExceptionHandling extends ResponseEntityExceptionH
 		return new ResponseEntity<String>("No Data found for given Input Data", HttpStatus.NOT_FOUND);
 
 	}
+	
+	@ExceptionHandler(IllegalArgumentException.class)
+	public ResponseEntity<String> hadleIllegalArgumentException(IllegalArgumentException exception) {
+		return new ResponseEntity<String>("No Data found for given Input Data", HttpStatus.NOT_FOUND);
+
+	}
+	
 
 	@Override
 	protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException ex,

@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("stockwatch/api/v1")
 @Tag(name = "Stock Watch", description = "Stock Details API's")
+@CrossOrigin(value="*")
 public class StockWatchController {
 
 	private final Logger logger = LoggerFactory.getLogger(StockWatchController.class);
@@ -43,7 +45,8 @@ public class StockWatchController {
 
 	@Operation(summary = "To get Stock Details by companyName")
 	@ApiResponses({ @ApiResponse(responseCode = "200", description = "Retrived Stock details Sucessfully"),
-			@ApiResponse(responseCode = "404", description = "No detaild found for entered company Name") })
+			@ApiResponse(responseCode = "404", description = "No detaild found for entered company Name"),
+			@ApiResponse(responseCode = "500", description = "No detaild found for entered company Name")})
 	@GetMapping("/stock/{stockName}")
 	public ResponseEntity<StockDetailsDTO> getstockDetails(@PathVariable String stockName) {
 
@@ -114,12 +117,13 @@ public class StockWatchController {
 			@ApiResponse(responseCode = "404", description = "No Data found in server") })
 	@GetMapping("/stocks/Pagenationandsort/{offset}/{pageSize}")
 	public ResponseEntity<Page<StockDetails>> getAllstockDetailsPagenationAndSort(@PathVariable int offset,
-			@PathVariable int pageSize, @RequestParam String feildName) {
+			@PathVariable int pageSize, @RequestParam String feildName,
+			@RequestParam(defaultValue = SORTING_TYPE_DEFAULT)String sortOder) {
 
 		logger.info("API call to get all stock for offset value {} having page size {} Sorted by coloumn {}", offset,
 				pageSize, feildName);
 		return new ResponseEntity<Page<StockDetails>>(
-				stockService.getAllStocksByPaginationAndSort(offset, pageSize, feildName), HttpStatus.OK);
+				stockService.getAllStocksByPaginationAndSort(offset, pageSize, feildName,sortOder), HttpStatus.OK);
 
 	}
 	
