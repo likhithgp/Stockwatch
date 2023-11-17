@@ -32,7 +32,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("stockwatch/api/v1")
 @Tag(name = "Stock Watch", description = "Stock Details API's")
-@CrossOrigin(value="*")
+@CrossOrigin(value="http://localhost:4200")
 public class StockWatchController {
 
 	private final Logger logger = LoggerFactory.getLogger(StockWatchController.class);
@@ -45,8 +45,8 @@ public class StockWatchController {
 
 	@Operation(summary = "To get Stock Details by companyName")
 	@ApiResponses({ @ApiResponse(responseCode = "200", description = "Retrived Stock details Sucessfully"),
-			@ApiResponse(responseCode = "404", description = "No detaild found for entered company Name"),
-			@ApiResponse(responseCode = "500", description = "No detaild found for entered company Name")})
+			@ApiResponse(responseCode = "404", description = "No detaild found for entered company Name")
+			})
 	@GetMapping("/stock/{stockName}")
 	public ResponseEntity<StockDetailsDTO> getstockDetails(@PathVariable String stockName) {
 
