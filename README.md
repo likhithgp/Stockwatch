@@ -7,12 +7,13 @@ This Project Contains an API to fetch Stock Details of the Company with Customiz
 
 API Infromation
 ------------------------
-It Consist of 10 API's including one API to fetch Health of Application.
+It Consist of 12 API's including one API to fetch Health of Application.
 
 + POST API to add new Stockdetails.
-+ Seven GET API to get Details from DB based on customization. [Get details by Company name,Company Stock Symbol,sorting order, Prefered column name sorting, Pagination]
++ Eight GET API to get Details from DB based on customization. [Get details by Company name,Company Stock Symbol,sorting order, Prefered column name sorting, Pagination,FilterByPagination based on current price]
 + PUT API to update stock details.
 + DELETE API to delete stock details.
++ It has also one actuator API implicity.
 
 Documenation
 --------------------
