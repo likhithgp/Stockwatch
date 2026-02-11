@@ -241,118 +241,94 @@ Postman collection
 
 
 
-Package Structure & Separation of Concerns
+# Design Decisions
+
+## Package Structure & Separation of Concerns
 
 To ensure maintainability, scalability, and clear ownership across multiple engineers, the project follows a clean layered architecture:
 
-controller
+- **controller**
+  - Contains all REST endpoint classes.
+  - Responsible only for handling HTTP requests/responses.
+  - Delegates business logic to the service layer.
 
-Contains all REST endpoint classes.
+- **service**
+  - Contains business logic and core application rules.
+  - Keeps controllers thin and focused on transport concerns.
+  - Improves testability and separation of concerns.
 
-Responsible only for handling HTTP requests/responses.
+- **model**
+  - Contains POJO classes (DTOs) for request and response payloads.
+  - Separates API contracts from internal implementation.
+  - Makes the system easier to extend and refactor.
 
-Delegates business logic to the service layer.
+- **exception**
+  - Centralized exception handling using `@ControllerAdvice`.
+  - Maps exceptions to appropriate HTTP status codes.
+  - Returns only required error information.
+  - Prevents internal stack traces from leaking to clients.
 
-service
+- **configuration**
+  - Contains configuration-related classes (e.g., OpenAPI config, filters, custom beans).
+  - Keeps setup logic isolated and organized.
 
-Contains business logic and core application rules.
+- **constants**
+  - Stores reusable constant values in a single place.
+  - Avoids duplication of hard-coded values.
+  - Ensures easier updates and better maintainability.
 
-Keeps controllers thin and focused on transport concerns.
+---
 
-Improves testability and separation of concerns.
+## API Documentation
 
-model
+- Integrated **Swagger / OpenAPI** documentation.
+- Provides clear request and response models.
+- Improves developer onboarding.
+- Enables easy testing through Swagger UI.
+- Encourages consistent API standards across services.
 
-Contains POJO classes (DTOs) for request and response payloads.
+---
 
-Separates API contracts from internal implementation.
+## Validation
 
-Makes the system easier to extend and refactor.
+- Implemented input validation using **Jakarta Validation** (`@Valid`, `@NotNull`, etc.).
+- Ensures invalid data is rejected at the boundary.
+- Returns meaningful validation error messages.
+- Improves reliability and protects business logic from bad inputs.
 
-exception
+---
 
-Centralized exception handling using @ControllerAdvice.
+## Exception Handling Strategy
 
-Maps exceptions to appropriate HTTP status codes.
+- Global exception handler ensures:
+  - Proper HTTP status codes.
+  - Clean, standardized error responses.
+  - No exposure of internal implementation details.
+  - Easy extensibility for domain-specific exceptions.
 
-Returns only required error information.
+---
 
-Prevents internal stack traces from leaking to clients.
+## Containerization
 
-configuration
+- Docker image provided for:
+  - Environment consistency across dev/test/prod.
+  - Simplified CI/CD integration.
+  - Easy deployment to cloud/Kubernetes environments.
+  - Horizontal scalability in high-traffic production systems.
 
-Contains configuration-related classes (e.g., OpenAPI config, filters, custom beans).
+- The service is designed to be **stateless**, making it suitable for scaling behind a load balancer.
 
-Keeps setup logic isolated and organized.
+---
 
-constants
-
-Stores reusable constant values in a single place.
-
-Avoids duplication of hard-coded values.
-
-Ensures easier updates and better maintainability.
-
-API Documentation
-
-Integrated Swagger / OpenAPI documentation.
-
-Provides clear request and response models.
-
-Improves developer onboarding.
-
-Enables easy testing through Swagger UI.
-
-Encourages consistent API standards across services.
-
-Validation
-
-Implemented input validation using Jakarta Validation (@Valid, @NotNull, etc.).
-
-Ensures invalid data is rejected at the boundary.
-
-Returns meaningful validation error messages.
-
-Improves reliability and protects business logic from bad inputs.
-
-Exception Handling Strategy
-
-Global exception handler ensures:
-
-Proper HTTP status codes.
-
-Clean, standardized error responses.
-
-No exposure of internal implementation details.
-
-Easy extensibility for domain-specific exceptions.
-
-Containerization
-
-Docker image provided for:
-
-Environment consistency across dev/test/prod.
-
-Simplified CI/CD integration.
-
-Easy deployment to cloud/Kubernetes environments.
-
-Horizontal scalability in high-traffic production systems.
-
-The service is designed to be stateless, making it suitable for scaling behind a load balancer.
-
-Production-Oriented Considerations
+## Production-Oriented Considerations
 
 Even though the functional scope is minimal, the structure reflects production-readiness:
 
-Clear separation of concerns.
+- Clear separation of concerns.
+- Centralized error handling.
+- Input validation.
+- API documentation.
+- Docker support.
+- Clean and extensible package structure.
 
-Centralized error handling.
-
-Input validation.
-
-API documentation.
-
-Docker support.
-
-Clean and extensible package structure.
+This ensures the service can serve as a reliable **base template** for future microservices within the organization.
